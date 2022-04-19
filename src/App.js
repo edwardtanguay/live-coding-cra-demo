@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/alt-text */
+import './App.scss';
+import data from './data/data.json';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <h1>Sample App</h1>
+            <img src="./images/code.png" />
+            <div>
+                First employee: {data.employees[0].firstName}{' '}
+                {data.employees[0].lastName}
+            </div>
+            <div>
+                Second employee: {data.employees[1].firstName}{' '}
+                {data.employees[1].lastName}
+            </div>
+        </div>
+    );
 }
 
 export default App;
